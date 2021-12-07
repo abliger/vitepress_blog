@@ -1,0 +1,24 @@
+{
+  "name": "vitepress_blog",
+  "version": "0.0.1",
+  "description": "冯思学的博客",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev .",
+    "docs:build": "vitepress build .",
+    "docs:serve": "vitepress serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://e.coding.net/abliger/abliger/vitepress_blog.git"
+  },
+  "keywords": [
+    "blog",
+    "vitepress"
+  ],
+  "author": "fengsixue",
+  "license": "ISC",
+  "dependencies": {
+    "vitepress": "^0.20.2"
+  }
+}
