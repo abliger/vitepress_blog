@@ -6,7 +6,9 @@
   "scripts": {
     "docs:dev": "vitepress dev .",
     "docs:build": "vitepress build .",
-    "docs:serve": "vitepress serve ."
+    "dockerfile:build": "docker build -t vitepress_blog .",
+    "dockerfile:run": "docker run -p 443:443 -p 80:80 --name blog -ti vitepress_blog",
+    "dockerfile:dev": "npm run dockerfile:build && npm run dockerfile:run"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,8 @@
   "license": "ISC",
   "dependencies": {
     "vitepress": "^0.20.2"
+  },
+  "devDependencies": {
+    "vite": "^2.7.1"
   }
 }
