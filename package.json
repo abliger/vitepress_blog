@@ -10,7 +10,7 @@
     "dockerfile:run": "docker run -p 443:443 -p 80:80 --name blog -ti vitepress_blog",
     "dockerfile:dev": "npm run dockerfile:build && npm run dockerfile:run",
     "eslint:lint": "eslint . --fix",
-    "prepare": "husky install && husky add .husky/pre-commit 'pnpm eslint:lint&&git add .'"
+    "prepare": "husky install && husky add .husky/pre-commit 'pnpm eslint:lint && git add .'"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,12 @@
     "eslint-plugin-vue": "latest",
     "husky": "^7.0.4",
     "vite": "^2.7.1",
-    "vitepress": "^0.20.2"
+    "vitepress": "^0.20.2",
+    "vue": "^3.2.26"
+  },
+  "dependencies": {
+
+    "axios": "^0.24.0",
+    "qs": "^6.10.2"
   }
 }
