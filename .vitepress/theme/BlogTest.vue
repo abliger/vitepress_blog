@@ -1,11 +1,10 @@
 <template>
   <div>
     <Content />
-    {{ content }}
     <div id="content" v-md-content="content" />
   </div>
 </template>
-<script>
+<script lang="jsx">
 import MdContent from './MdContent.vue'
 
 export default {
@@ -17,6 +16,12 @@ export default {
     }
   },
   created() {
+    this.$router.go('test').then(() => {
+      console.log(this.$router.route.component)
+      this.$router.route.component = () => <h1>test</h1>
+      console.log(this.$router.route.component)
+      console.log(this.$router)
+    })
     this.$post('/blog/get', {
       Article: { id: 1 }
     }).then(data => {
